@@ -20,7 +20,7 @@ object AIModule {
     fun provideGenerativeModel(): GenerativeModel {
         // Sử dụng model "gemini-3.1-flash-lite-preview" theo yêu cầu của Anh Tai
         val modelName = "gemini-3.1-flash-lite-preview"
-        val apiKey = "AIzaSyCGwXVqpLElxn1NnwsbBvRH14K4zm0oQJw" // Lấy tạm từ local.properties cho nhanh, lưu ý nên dùng BuildConfig
+        val apiKey = BuildConfig.GEMINI_API_KEY
 
         val safetySettings = listOf(
             SafetySetting(HarmCategory.HARASSMENT, BlockThreshold.MEDIUM_AND_ABOVE),

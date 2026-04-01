@@ -20,24 +20,31 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
+
     buildTypes {
+        debug {
+            val apiKey: String = project.rootProject.file("local.properties").let { file ->
+                if (file.exists()) {
+                    val properties = java.util.Properties()
+                    properties.load(file.inputStream())
+                    properties.getProperty("GEMINI_API_KEY") ?: ""
+                } else ""
+            }
+            buildConfigField("String", "GEMINI_API_KEY", "\"$apiKey\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // Trong thực tế release nên lấy từ biến môi trường của CI/CD
+            buildConfigField("String", "GEMINI_API_KEY", "\"\"")
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-    buildFeatures {
-        compose = true
     }
 }
 

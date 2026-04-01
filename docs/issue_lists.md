@@ -8,6 +8,7 @@ Bảng danh sách quản lý lỗi cho dự án Smart Study Assistant.
 | ISS002 | Sử dụng model Gemini lỗi thời | Cập nhật lại danh sách model 2026 | Chỉ sử dụng: gemini-3.1-flash-lite-preview, gemini-2.5-flash-lite, gemini-2.5-flash, gemini-3-flash-preview | Đã fix |
 | ISS003 | Lỗi cú pháp libs.versions.toml (version.literal) | Sửa thành version.ref | Chuyển version vào mục [versions] và tham chiếu đúng cú pháp Gradle | Đã fix |
 | ISS004 | Xung đột extension 'kotlin' trong build.gradle.kts | Nâng SDK 36 & Điều chỉnh cấu hình plugins | Xảy ra khi dùng Kotlin 2.1+ và SDK 36 mới | Đã fix |
+| ISS005 | Lộ API Key trên mã nguồn công khai | Xóa key, dùng BuildConfig & Revoke key cũ | Cần sử dụng local.properties và BuildConfig ngay từ đầu | Đã fix |
 
 ---
 *Cập nhật lần cuối: 2026-04-01*
