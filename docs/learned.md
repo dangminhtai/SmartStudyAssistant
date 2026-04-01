@@ -17,5 +17,9 @@ Dưới đây là các bài học, kiến thức thu thập được trong quá 
     - `gemini-2.5-flash`
     - `gemini-3-flash-preview`
 
+## 4. Gradle Version Catalog (libs.versions.toml)
+- [x] Không sử dụng `version.literal`. Gradle chỉ chấp nhận `version`, `version.ref`, hoặc các ràng buộc (strictly, prefer, ...).
+- [x] Cách tốt nhất là luôn khai báo version trong mục `[versions]` và dùng `version.ref` để quản lý tập trung.
+
 ---
 *Cập nhật lần cuối: 2026-04-01*
