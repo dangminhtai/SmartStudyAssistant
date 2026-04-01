@@ -144,7 +144,11 @@ Dự án bao gồm 6 module chính, có thể phát triển và deploy độc l�
 
 ### 5.2. APIs & Dịch vụ tích hợp
 *   **Gemini AI API:**
-    *   Sử dụng Gemini 3.0 Flash Preview, 2.5/3.1 Flash Lite.
+    *   Sử dụng các model hợp lệ của năm 2026:
+        *   `gemini-3.1-flash-lite-preview`
+        *   `gemini-2.5-flash-lite`
+        *   `gemini-2.5-flash`
+        *   `gemini-3-flash-preview`
     *   Yêu cầu: Streaming support, Safety settings, System prompt templates, Rate limiting (exponential backoff), Token counting.
 *   **Firebase Suite:**
     *   Auth: Email/Password, Google Sign-In, Anonymous.

@@ -10,5 +10,12 @@ Dưới đây là các bài học, kiến thức thu thập được trong quá 
 ## 2. Quy trình Agentic AI
 - [x] Phân chia tệp tin `task.md` vào từng thư mục cá nhân giúp Agent dễ dàng hỗ trợ đúng người đúng việc.
 
+## 3. Kiến thức về AI & Model (Năm 2026)
+- [x] Luôn sử dụng các model Gemini thế hệ mới nhất:
+    - `gemini-3.1-flash-lite-preview`
+    - `gemini-2.5-flash-lite`
+    - `gemini-2.5-flash`
+    - `gemini-3-flash-preview`
+
 ---
 *Cập nhật lần cuối: 2026-04-01*
