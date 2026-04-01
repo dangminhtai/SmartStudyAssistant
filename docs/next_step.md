@@ -1,21 +1,14 @@
 # NEXT_STEP.md - Các bước tiếp theo
 
-Kế hoạch hành động chi tiết sau khi phân chia nhiệm vụ.
+Kế hoạch chi tiết sau khi khởi tạo thành công task list.
 
-## 1. Đối với Anh Tai (@Tai)
-- [ ] Khởi tạo Project Android, cấu trúc package `com.ssa.app`.
-- [ ] Setup dependencies: Hilt, Room, Retrofit, Gemini SDK.
-- [ ] Thiết lập Remote Config cho Gemini API Key.
+## 1. Ưu tiên tuần 1 (Móng nhà)
+- [ ] Anh Tai đẩy cấu hình Hilt và Clean Architecture lên `dangminhtai`.
+- [ ] Duy thống nhất UI Design System (Colors + Theme) trên `duongminhduy`.
+- [ ] Bảo cài đặt Room Database cho thực thể Flashcards trên `nguyenvubao`.
 
-## 2. Đối với Duy (@Duy)
-- [ ] Thiết kế Mockup cho Dashboard trên Figma (nếu có).
-- [ ] Tạo UI Components dùng chung (Card, Button, Progress Ring).
-- [ ] Triển khai khung Task CRUD đầu tiên.
-
-## 3. Đối với Bảo (@Bao)
-- [ ] Nghiên cứu thuật toán SM-2+ và tối ưu hóa cho Flashcard.
-- [ ] Setup Firebase Auth cho hệ thống XP/Level.
-- [ ] Kiểm tra tích hợp ML Kit cho tính năng OCR.
+## 2. Đồng bộ hóa
+- [ ] Thực hiện các Pull Request (PR) định kỳ để gộp các thành phần UI dùng chung.
 
 ---
 *Cập nhật lần cuối: 2026-04-01*

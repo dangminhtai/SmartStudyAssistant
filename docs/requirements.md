@@ -1,6 +1,4 @@
-Dựa vào tài liệu Proposal bạn đã cung cấp, dưới đây là file `requirements.md` (Tài liệu Đặc tả Yêu cầu) được trích xuất và tổ chức lại một cách hệ thống, chuẩn mực dành cho dự án phần mềm.
 
----
 
 # BẢNG ĐẶC TẢ YÊU CẦU DỰ ÁN (REQUIREMENTS SPECIFICATION)
 **Tên dự án:** Smart Study Assistant (SSA)
@@ -159,33 +157,30 @@ Dự án bao gồm 6 module chính, có thể phát triển và deploy độc l�
 
 ---
 
+
+---
+
 ## 6. PHÂN BỔ NHIỆM VỤ NHÓM (TEAM TASK ALLOCATION)
 
-Dựa trên yêu cầu từ anh Tai, công việc được chia cho 3 thành viên cụ thể như sau:
+Dựa trên yêu cầu của Leader Anh Tai, dự án được chia theo các module chức năng trọn gói như sau:
 
-### 6.1. Anh Tai (@Tai) - Trưởng nhóm & AI Infrastructure
-- **Chuyên môn:** AI, API Integration, Architecture.
-- **Nhiệm vụ:**
-    - Cấu trúc dự án theo chuẩn Clean Architecture (Presentation, Domain, Data).
-    - Tích hợp Gemini API phục trợ toàn bộ ứng dụng.
-    - Phát triển Module 05: **AI Study Chatbot**.
-    - Đồng bộ hóa 2 chiều với Google Calendar API.
-    - Thiết lập Hilt, Room và Retrofit core services.
+### 6.1. Anh Tai (@Tai) - AI Chatbot & Core Infrastructure
+- **Module 05: AI Study Chatbot** (Xử lý toàn bộ logic Gemini API, context môn học).
+- **Core Infrastructure**: Thiết lập Clean Architecture (MVVM/MVI), Hilt DI, Retrofit.
+- **AI Core Services**: Xây dựng các Service hỗ trợ AI (gợi ý task, tạo flashcard, trả lời nhanh).
+- **Integration**: Google Calendar API 2-way sync.
 
-### 6.2. Duy (@Duy) - UI/UX & Task Specialist
-- **Chuyên môn:** Jetpack Compose, UI Design, Workflow.
-- **Nhiệm vụ:**
-    - Phát triển Module 01: **Smart Dashboard** (Biểu đồ, Widget, Animation).
-    - Phát triển Module 03: **Task & Schedule Manager**.
-    - Xây dựng hệ thống UI Design System (Material 3, Dark/Light Mode).
-    - Quản lý điều hướng (Navigation) và Luồng người dùng.
+### 6.2. Duy (@Duy) - Dashboard & Task Management
+- **Module 01: Smart Dashboard** (Greeting, Charts, Widgets, Animation).
+- **Module 03: Task & Schedule Manager** (CRUD Task, Ma trận Eisenhower, Phân tích năng suất).
+- **UI Design System**: Phát triển Material Design 3, Theme, Design system dùng chung.
 
-### 6.3. Bảo (@Bao) - Core Logic & Engagement
-- **Chuyên môn:** Algorithm, Background Services, Gamification.
-- **Nhiệm vụ:**
-    - Phát triển Module 02: **AI Flashcard System** (Thuật toán SM-2+, OCR ML Kit).
-    - Phát triển Module 04: **Pomodoro Focus Timer** (Foreground Service, Ambient Sounds).
-    - Phát triển Module 06: **Gamification & Analytics** (XP, Badges, Heatmap).
-    - Phụ trách Firebase Firestore và Analytics.
+### 6.3. Bảo (@Bao) - Flashcards, Pomodoro & Gamification
+- **Module 02: AI Flashcard System** (Hệ thống Spaced Repetition SM-2+, OCR ML Kit).
+- **Module 04: Pomodoro Focus Timer** (Foreground Service, Ambient Sounds).
+- **Module 06: Gamification & Analytics** (XP, Badges, Heatmap, Firebase Analytics).
+
+---
+
 
 ---
