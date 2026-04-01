@@ -1,9 +1,9 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.hilt)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.kotlin.compose)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
+    id("com.google.dagger.hilt.android")
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
@@ -22,18 +22,18 @@ android {
 
     buildFeatures {
         compose = true
+        viewBinding = true
         buildConfig = true
     }
 
     buildTypes {
         debug {
-            val apiKey: String = project.rootProject.file("local.properties").let { file ->
-                if (file.exists()) {
-                    val properties = java.util.Properties()
-                    properties.load(file.inputStream())
-                    properties.getProperty("GEMINI_API_KEY") ?: ""
-                } else ""
+            val properties = java.util.Properties()
+            val localPropertiesFile = project.rootProject.file("local.properties")
+            if (localPropertiesFile.exists()) {
+                properties.load(localPropertiesFile.inputStream())
             }
+            val apiKey = properties.getProperty("GEMINI_API_KEY") ?: ""
             buildConfigField("String", "GEMINI_API_KEY", "\"$apiKey\"")
         }
         release {
@@ -42,9 +42,17 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            // Trong thực tế release nên lấy từ biến môi trường của CI/CD
             buildConfigField("String", "GEMINI_API_KEY", "\"\"")
         }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
 
@@ -65,7 +73,7 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt-android)
-    kapt(libs.hilt-compiler)
+    ksp(libs.hilt-compiler)
     implementation(libs.hilt-navigation-compose)
 
     // Room
