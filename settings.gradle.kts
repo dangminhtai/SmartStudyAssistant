@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SmartStudyAssistant"
+rootProject.name = "SmartStudyAssistantv2"
 include(":app")
  

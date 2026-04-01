@@ -21,5 +21,9 @@ Dưới đây là các bài học, kiến thức thu thập được trong quá 
 - [x] Không sử dụng `version.literal`. Gradle chỉ chấp nhận `version`, `version.ref`, hoặc các ràng buộc (strictly, prefer, ...).
 - [x] Cách tốt nhất là luôn khai báo version trong mục `[versions]` và dùng `version.ref` để quản lý tập trung.
 
+## 5. Refactor & Modern Architecture
+- [x] Việc chuyển đổi từ Java sang Kotlin giúp code ngắn gọn, an toàn hơn (Null safety).
+- [x] Áp dụng Clean Architecture (Domain, Data, Presentation) giúp dự án dễ mở rộng và bảo trì trong tương lai.
+
 ---
 *Cập nhật lần cuối: 2026-04-01*

@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.SmartStudyAssistant" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.SmartStudyAssistantv2" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.SmartStudyAssistant" parent="Base.Theme.SmartStudyAssistant" />
+    <style name="Theme.SmartStudyAssistantv2" parent="Base.Theme.SmartStudyAssistantv2" />
 </resources>

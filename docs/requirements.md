@@ -161,8 +161,15 @@ Dự án bao gồm 6 module chính, có thể phát triển và deploy độc l�
 
 ---
 
+## 7. LỊCH SỬ THAY ĐỔI YÊU CẦU (REQUIREMENTS CHANGE LOG)
+
+| Index | Ngày | Nội dung yêu cầu | Trạng thái |
+|-------|------------|----------------------------------------------------------|------------|
+| REQ001| 2026-04-01 | Refactor dự án sang Kotlin & áp dụng Clean Architecture | [x] Done   |
 
 ---
+
+*Cập nhật lần cuối: 2026-04-01*
 
 ## 6. PHÂN BỔ NHIỆM VỤ NHÓM (TEAM TASK ALLOCATION)
 
